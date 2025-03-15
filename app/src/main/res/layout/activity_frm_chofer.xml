@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frmchofer___cristian"
+    tools:context=".frmChofer">
+
+    <RadioGroup
+        android:id="@+id/RadioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="55dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0">
+
+        <EditText
+            android:id="@+id/transporte"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="300dp"
+            android:layout_marginEnd="43dp"
+            android:layout_marginBottom="9dp"
+            android:ems="10"
+            android:hint="Transporte: ejemplo paraíso"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="#000000" />
+
+        <RadioButton
+            android:id="@+id/retraso"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="15dp"
+            android:text="Retraso"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/tmpretraso"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginBottom="38dp"
+            android:ems="10"
+            android:hint="Tiempo de restraso"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="#000000" />
+
+        <RadioButton
+            android:id="@+id/cancelacon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="52dp"
+            android:layout_marginBottom="21dp"
+            android:text="Cancelación"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/motivo"
+            android:layout_width="300dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="52dp"
+            android:layout_marginBottom="198dp"
+            android:ems="10"
+            android:hint="Motivo"
+            android:inputType="text"
+            android:textColor="@color/black"
+            android:textColorHint="#000000" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btnenviar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="53dp"
+        android:layout_marginEnd="20dp"
+        android:backgroundTint="#21B02C"
+        android:text="Enviar"
+        android:textColor="@color/white"
+        app:layout_constraintBaseline_toBaselineOf="@+id/btnregresar"
+        app:layout_constraintEnd_toStartOf="@+id/btnregresar"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        android:id="@+id/btnregresar"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="111dp"
+        android:backgroundTint="#21B02C"
+        android:text="Regresar"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnenviar" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

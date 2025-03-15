@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/frmregistro___karla"
+    tools:context=".FrmRegistro">
+
+    <Button
+        android:id="@+id/btnatras"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="45dp"
+        android:layout_marginEnd="27dp"
+        android:backgroundTint="#21B02C"
+        android:text="Atrás"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/btnregistrarse"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/btnregistrarse" />
+
+    <Button
+        android:id="@+id/btnregistrarse"
+        android:layout_width="150dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="7dp"
+        android:layout_marginTop="88dp"
+        android:layout_marginEnd="34dp"
+        android:layout_marginBottom="60dp"
+        android:backgroundTint="#21B02C"
+        android:text="Registrarse"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/btnatras"
+        app:layout_constraintTop_toBottomOf="@+id/MatriculaE"
+        app:layout_constraintVertical_bias="1.0" />
+
+    <EditText
+        android:id="@+id/NombreE"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="166dp"
+        android:layout_marginBottom="7dp"
+        android:ems="10"
+        android:hint="Nombre"
+        android:inputType="text"
+        android:textColor="@color/black"
+        android:textSize="20sp"
+        app:layout_constraintBottom_toTopOf="@+id/ApellidoE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/ApellidoE"
+        android:layout_width="250dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Apellido"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/EdadE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NombreE" />
+
+    <EditText
+        android:id="@+id/EdadE"
+        android:layout_width="250dp"
+        android:textColor="@color/black"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="Edad"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/CoreoE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/ApellidoE" />
+
+    <EditText
+        android:id="@+id/CoreoE"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:textColor="@color/black"
+        android:hint="Correo electronico"
+        android:inputType="text"
+        app:layout_constraintBottom_toTopOf="@+id/ContrasenaE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/EdadE" />
+
+    <EditText
+        android:id="@+id/ContrasenaE"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:hint="Contraseña"
+        android:textColor="@color/black"
+        android:ems="10"
+        android:inputType="textPassword"
+        app:layout_constraintBottom_toTopOf="@+id/NumE"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/CoreoE" />
+
+    <EditText
+        android:id="@+id/NumE"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:hint="Número de teléfono"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/MatriculaE"
+        app:layout_constraintStart_toStartOf="@+id/ContrasenaE"
+        app:layout_constraintTop_toBottomOf="@+id/ContrasenaE" />
+
+    <EditText
+        android:id="@+id/MatriculaE"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="88dp"
+        android:ems="10"
+        android:hint="Matricula"
+        android:inputType="text"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/btnatras"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/NumE" />
+</androidx.constraintlayout.widget.ConstraintLayout>

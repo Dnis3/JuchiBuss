@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/hora_cristian"
+    tools:context=".Horario">
+
+    <ScrollView
+        android:id="@+id/scrollView2"
+        android:layout_width="201dp"
+        android:layout_height="598dp"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="130dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="13dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toEndOf="@+id/hr7"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="NotSibling">
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <Button
+                android:id="@+id/hr1"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="4dp"
+                android:backgroundTint="#21B02C"
+                android:text="07:00 a.m - 8:00 a.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr2"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="08:00 a.m - 9:00 a.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr3"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="09:00 a.m - 10:00 a.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr4"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="10:00 a.m - 11:00 a.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr5"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="11:00 a.m - 12:00 p.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr6"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="12:00 p.m - 01:00 p.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr7"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="01:00 p.m - 02:00 p.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr8"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="02:00 p.m - 03:00 p.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr9"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="03:00 p.m - 04:00 p.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr10"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="04:00 p.m - 05:00 p.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr11"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="05:00 p.m - 06:00 p.m"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/hr12"
+                android:layout_width="wrap_content"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:backgroundTint="#21B02C"
+                android:text="06:00 p.m - 06:30 p.m"
+                android:textColor="@color/white" />
+        </LinearLayout>
+    </ScrollView>
+
+    <Button
+        android:id="@+id/rg2"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:background="?attr/actionModeCloseDrawable"
+        tools:layout_editor_absoluteY="44dp"
+        tools:ignore="MissingConstraints" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
