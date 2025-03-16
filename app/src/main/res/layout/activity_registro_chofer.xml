@@ -2,135 +2,123 @@
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/frmregistro___karla"
-    tools:context=".FrmRegistro">
-
-    <Button
-        android:id="@+id/btnatras"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginStart="49dp"
-        android:layout_marginEnd="16dp"
-        android:layout_marginBottom="87dp"
-        android:backgroundTint="#21B02C"
-        android:text="Atrás"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/btnregistrarse"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <Button
-        android:id="@+id/btnregistrarse"
-        android:layout_width="0dp"
-        android:layout_height="50dp"
-        android:layout_marginEnd="66dp"
-        android:layout_marginBottom="87dp"
-        android:backgroundTint="#21B02C"
-        android:text="Continuar"
-        android:textColor="@color/white"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/btnatras" />
+    tools:context=".Registro_chofer">
 
     <EditText
-        android:id="@+id/nombrec"
-        android:layout_width="250dp"
+        android:id="@+id/Text_folio"
+        android:layout_width="242dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="166dp"
+        android:layout_marginTop="172dp"
         android:ems="10"
-        android:hint="Nombre"
+        android:hint="Licencia"
         android:inputType="text"
-        android:textColor="@color/black"
-        android:textSize="20sp"
-        app:layout_constraintBottom_toTopOf="@+id/apellidoc"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/apellidoc"
-        android:layout_width="250dp"
-        android:textColor="@color/black"
+        android:id="@+id/Text_nombre"
+        android:layout_width="242dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Apellido"
+        android:hint="Nombre"
         android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/edadc"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/nombrec"/>
+        app:layout_constraintTop_toBottomOf="@+id/Text_folio" />
 
     <EditText
-        android:id="@+id/edadc"
-        android:layout_width="250dp"
-        android:textColor="@color/black"
+        android:id="@+id/Text_correo"
+        android:layout_width="242dp"
         android:layout_height="wrap_content"
-        android:ems="10"
-        android:hint="Edad"
-        android:inputType="text"
-        app:layout_constraintBottom_toTopOf="@+id/correoc"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/apellidoc" />
-
-    <EditText
-        android:id="@+id/correoc"
-        android:layout_width="250dp"
-        android:layout_height="wrap_content"
-        android:layout_marginBottom="11dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
         android:hint="Correo electrónico"
-        android:inputType="text"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/contrasenac"
+        android:inputType="textEmailAddress"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.503"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/edadc" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_nombre" />
 
     <EditText
-        android:id="@+id/contrasenac"
-        android:layout_width="250dp"
+        android:id="@+id/Text_contraseña"
+        android:layout_width="242dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="10dp"
+        android:layout_marginTop="16dp"
+        android:ems="10"
         android:hint="Contraseña"
-        android:textColor="@color/black"
-        android:ems="10"
         android:inputType="textPassword"
-        app:layout_constraintBottom_toTopOf="@+id/numc"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correoc" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_correo" />
 
     <EditText
-        android:id="@+id/numc"
-        android:layout_width="250dp"
+        android:id="@+id/Text_confcontra"
+        android:layout_width="242dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="11dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Número de teléfono"
-        android:inputType="text"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/foliocirculacion"
-        app:layout_constraintStart_toStartOf="@+id/contrasenac"
-        app:layout_constraintTop_toBottomOf="@+id/contrasenac" />
+        android:hint="Confirma tu contraseña"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_contraseña" />
 
     <EditText
-        android:id="@+id/foliocirculacion"
-        android:layout_width="250dp"
+        android:id="@+id/Text_tele"
+        android:layout_width="242dp"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="23dp"
+        android:layout_marginTop="16dp"
         android:ems="10"
-        android:hint="Número de licencia"
-        android:inputType="text"
-        android:textColor="@color/black"
-        app:layout_constraintBottom_toTopOf="@+id/btnregistrarse"
+        android:hint="Teléfono"
+        android:inputType="phone"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/numc" />
+        app:layout_constraintTop_toBottomOf="@+id/Text_confcontra" />
 
+    <Button
+        android:id="@+id/btn_rechof"
+        android:layout_width="209dp"
+        android:layout_height="47dp"
+        android:layout_marginTop="24dp"
+        android:backgroundTint="#21B02C"
+        android:text="Registrarme"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/Text_tele" />
+
+    <Button
+        android:id="@+id/btn_cuentachof"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="36dp"
+        android:backgroundTint="@color/white"
+        android:text="Ya tengo una cuenta"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_rechof" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="28dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="12dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toBottomOf="@+id/Text_contraseña"
+        app:layout_constraintEnd_toEndOf="@+id/Text_contraseña"
+        app:srcCompat="@drawable/ic_ojo_cerrado" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -8,12 +8,12 @@ import android.database.sqlite.SQLiteOpenHelper
 class SQLManager(context: Context) : SQLiteOpenHelper(context, "usuarios.db", null, 1) {
     override fun onCreate(db: SQLiteDatabase?) {
         db!!.execSQL(
-            "CREATE TABLE alumnos(correoelectronico VARCHAR(50) PRIMARY KEY, nombre VARCHAR(50), apellido VARCHAR(50), " +
-                    "edad VARCHAR(50), contraseña VARCHAR(50), numtelefono VARCHAR(50), matricula VARCHAR(50))"
+            "CREATE TABLE alumnos(matricula VARCHAR(50) PRIMARY KEY, nombre VARCHAR(70), correoelectronico VARCHAR(50), " +
+                    "contraseña VARCHAR(50), numtelefono VARCHAR(10) )"
         )
         db!!.execSQL(
-            "CREATE TABLE chofer(correoelectronicochofer VARCHAR(50) PRIMARY KEY, nombre VARCHAR(50), apellidochofer VARCHAR(50), " +
-                    "edadchofer VARCHAR(50), contraseña VARCHAR(50), numtelefonochofer VARCHAR(50), folio VARCHAR(50))"
+            "CREATE TABLE chofer(folio VARCHAR(50) PRIMARY KEY, nombre VARCHAR(70), correoelectronicochofer VARCHAR(50) , " +
+                    "contraseña VARCHAR(50), numtelefonochofer VARCHAR(10))"
         )
         db!!.execSQL(
             "CREATE TABLE reportes(transporte VARCHAR(50) PRIMARY KEY, tiemporetraso VARCHAR(50), " +
@@ -30,8 +30,8 @@ class SQLManager(context: Context) : SQLiteOpenHelper(context, "usuarios.db", nu
 
     fun addalumno(context: Context, datos: alumnosClass): Boolean {
         val db = writableDatabase
-        val query = "SELECT * FROM alumnos WHERE correoelectronico = ?"
-        val cursor = db.rawQuery(query, arrayOf(datos.correoelectronico))
+        val query = "SELECT * FROM alumnos WHERE matricula = ?"
+        val cursor = db.rawQuery(query, arrayOf(datos.matricula))
 
         if (cursor.count > 0) {
             cursor.close()
@@ -41,13 +41,12 @@ class SQLManager(context: Context) : SQLiteOpenHelper(context, "usuarios.db", nu
         cursor.close()
 
         val contentValues = ContentValues().apply {
+            put("matricula", datos.matricula)
             put("nombre", datos.nombre)
-            put("apellido", datos.apellido)
-            put("edad", datos.edad)
             put("correoelectronico", datos.correoelectronico)
             put("contraseña", datos.contrasena)
             put("numtelefono", datos.numtelefono)
-            put("matricula", datos.matricula)
+
         }
 
         return try {
@@ -62,8 +61,8 @@ class SQLManager(context: Context) : SQLiteOpenHelper(context, "usuarios.db", nu
 
     fun addchofer(context: Context, datos: choferClass): Boolean {
         val db = writableDatabase
-        val query = "SELECT * FROM chofer WHERE correoelectronicochofer = ?"
-        val cursor = db.rawQuery(query, arrayOf(datos.correoelectronicochofer))
+        val query = "SELECT * FROM chofer WHERE folio = ?"
+        val cursor = db.rawQuery(query, arrayOf(datos.folio))
 
         if (cursor.count > 0) {
             cursor.close()
@@ -73,13 +72,12 @@ class SQLManager(context: Context) : SQLiteOpenHelper(context, "usuarios.db", nu
         cursor.close()
 
         val contentValues = ContentValues().apply {
+            put("folio", datos.folio)
             put("nombre", datos.nombrechofer)
-            put("apellidochofer", datos.apellidochofer)
-            put("edadchofer", datos.edadchofer)
             put("correoelectronicochofer", datos.correoelectronicochofer)
             put("contraseña", datos.contrasenachofer)
             put("numtelefonochofer", datos.numtelefonochofer)
-            put("folio", datos.folio)
+
         }
 
         return try {
@@ -112,10 +110,20 @@ class SQLManager(context: Context) : SQLiteOpenHelper(context, "usuarios.db", nu
         }
     }
 
-    fun verificarAlumno(correo: String): Boolean {
+    fun verificarAlumno(matricula: String): Boolean {
         val db = readableDatabase
-        val query = "SELECT * FROM alumnos WHERE correoelectronico = ?"
-        val cursor = db.rawQuery(query, arrayOf(correo))
+        val query = "SELECT * FROM alumnos WHERE matricula = ?"
+        val cursor = db.rawQuery(query, arrayOf(matricula))
+        val usuarioExiste = cursor.count > 0
+        cursor.close()
+        db.close()
+        return usuarioExiste
+    }
+
+    fun verificarChofer(folio: String): Boolean {
+        val db = readableDatabase
+        val query = "SELECT * FROM chofer WHERE folio = ?"
+        val cursor = db.rawQuery(query, arrayOf(folio))
         val usuarioExiste = cursor.count > 0
         cursor.close()
         db.close()

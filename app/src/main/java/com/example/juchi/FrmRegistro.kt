@@ -9,8 +9,8 @@ class FrmRegistro : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_frm_registro)
-        val estudiante: Button = findViewById(R.id.btnatras) as Button
-        val chofer: Button = findViewById(R.id.btnregistrarse) as Button
+        val estudiante: Button = findViewById(R.id.registroestudiante)
+        val chofer: Button = findViewById(R.id.btn_chofer)
         estudiante.setOnClickListener {
             val intent = Intent(this@FrmRegistro, Registro_estudiante::class.java)
             startActivity(intent)
